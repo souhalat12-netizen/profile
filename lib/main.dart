@@ -38,7 +38,7 @@ class ProfilePage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              // --- 1. الـ Stack: فيه 3 طبقات فوق بعضهم ---
+              //  1.  Stack: فيه 3 طبقات فوق بعضهم
               Stack(
                 clipBehavior: Clip.none,
                 alignment: Alignment.center,
@@ -103,7 +103,7 @@ class ProfilePage extends StatelessWidget {
               ),
 
               const SizedBox(height: 60), // مسافة باش الاسم ما يتغطاش بالصورة
-              // --- 2. الاسم الشخصي ---
+              //  2. الاسم الشخصي
               const Text(
                 "Souha Latreche",
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -111,7 +111,7 @@ class ProfilePage extends StatelessWidget {
 
               const SizedBox(height: 10),
 
-              // --- 3. زر المتابعة (Follow) الوردي ---
+              //  3. زر المتابعة (Follow) الوردي
               ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
@@ -141,7 +141,7 @@ class ProfilePage extends StatelessWidget {
                     color: Colors.grey[300], // اللون الرمادي
                     borderRadius: BorderRadius.circular(10), // تدوير الزوايا
                   ),
-                  // --- 4. قسم الإحصائيات (Row) ---
+
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -155,7 +155,7 @@ class ProfilePage extends StatelessWidget {
               const SizedBox(height: 20),
 
 
-              //  5. عنوان المنشورات (Posts & Show All)
+              //  5.   (Posts & Show All)
               Padding(
                 padding: const EdgeInsets.only(left: 25, right: 25, top: 0, bottom: 0),
                 child: Row(
@@ -168,8 +168,7 @@ class ProfilePage extends StatelessWidget {
               ),
 
               const SizedBox(height: 10),
-              // --- 6. قسم الصور (4 صور) ---
-
+              //  6. قسم الصور (4 صور)
 
               Transform.translate(
                 offset: const Offset(0, -50),
@@ -199,7 +198,7 @@ class ProfilePage extends StatelessWidget {
       ),
     ); // نهاية الـ Scaffold
   } // نهاية الـ Build Method
-// هادي الدالة هي اللي تنحي الخطأ، حطيها تحت الدالة _buildStatItem
+
 
 
   Widget _buildPostImage(String url) {
@@ -216,7 +215,7 @@ class ProfilePage extends StatelessWidget {
 
 
 
-  // --- 5. هادي هي الدالة المساعدة (اللي كانت دايرة مشكل في الصورة) ---
+  //  5. هادي هي الدالة المساعدة (اللي كانت دايراتلي مشكل في الصورة)
   // لازم تكون داخل الكلاس بصح خاااارج الـ build method
   Widget _buildStatItem(String count, String label) {
     return Column(
